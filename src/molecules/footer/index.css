@@ -1,0 +1,13 @@
+footer {
+  grid-area: footer;
+  background-color: var(--color-black-bg);
+}
+
+footer p {
+  color: var(--color-white);
+  margin: 0 auto;
+  width: max-content;
+  padding: 0;
+  font-size: var(--font-12);
+  transform: rotate(-90deg) translate(-50%, -50%);
+}

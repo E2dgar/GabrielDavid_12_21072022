@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import "./index.css"
 
 /**
- * Component for a menu item from main Nav
+ * Component for a menu item in main Nav
  * @component
  */
 const ItemMainNav = ({textContent, href}) => {

@@ -1,0 +1,12 @@
+.secondary-nav {
+  grid-area: nav; 
+  background-color: var(--color-black-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondary-nav ul{
+  margin: auto;
+  padding: 20px 0;
+  list-style: none;
+}

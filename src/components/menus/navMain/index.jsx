@@ -2,7 +2,7 @@ import ItemMainNav from "../../../atoms/menuItems/mainNav";
 import './index.css'
 
 /**
- * Component for a menu item from main Nav
+ * Component for the main nav
  * @component
  */
 const MainNav = () => {
