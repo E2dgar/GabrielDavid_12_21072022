@@ -41,8 +41,8 @@ body {
 #root {
   display:grid;
   grid-template-areas: "header header"
-                       "nav    main  "
-                       "footer main  ";
+                       "nav main"
+                       "footer main";
   grid-template-rows: 91px 1fr 258px;
   grid-template-columns: 117px 1fr;
 }

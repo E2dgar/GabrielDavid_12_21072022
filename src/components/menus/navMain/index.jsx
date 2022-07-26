@@ -1,4 +1,4 @@
-import ItemMainNav from "../../../atoms/menuItems/mainNav";
+import ItemMainNav from "../../atoms/menuItems/mainNav";
 import './index.css'
 
 /**
