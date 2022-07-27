@@ -1,19 +1,19 @@
 .activity {
-  grid-area: activity;
-  background-color: var(--background-chart);
-  position: relative;
+    grid-area: activity;
+    background-color: var(--background-chart);
+    position: relative;
 }
 
 .activity h2 {
-  position: absolute;
-  top: 24px;
-  left: 32px;
+    position: absolute;
+    top: 24px;
+    left: 32px;
 }
 
-.kilogramBar path{
-  fill: var(--color-black-chart)
+.kilogramBar path {
+    fill: var(--color-black-chart);
 }
 
-.caloriesBar path{
-  fill: var(--color-primray-chart)
+.caloriesBar path {
+    fill: var(--color-primray-chart);
 }

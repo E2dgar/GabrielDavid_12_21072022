@@ -1,24 +1,21 @@
 import PropTypes from 'prop-types';
-import "./index.css";
-
+import './index.css';
 
 /**
  * Component for a menu item in secondary Nav
  * @component
  */
-const ItemSecondaryNav = ({href, picto}) => {
-  return (
-    <li className='secondary-nav-menu-item'>
-      <a href={href}>
-        {picto}
-      </a>
-    </li>
-  )
-}
+const ItemSecondaryNav = ({ href, picto }) => {
+    return (
+        <li className="secondary-nav-menu-item">
+            <a href={href}>{picto}</a>
+        </li>
+    );
+};
 
 ItemSecondaryNav.propsType = {
-  picto: PropTypes.element.isRequired,
-  href: PropTypes.string.isRequired
-}
+    picto: PropTypes.element.isRequired,
+    href: PropTypes.string.isRequired
+};
 
-export default ItemSecondaryNav
+export default ItemSecondaryNav;

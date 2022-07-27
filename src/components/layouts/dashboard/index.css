@@ -1,11 +1,12 @@
 main {
-  max-width: 100vw;
-  grid-area: main;
-  background-color: var(--color-white);
-  display: grid;
-  grid-template-areas: "hello hello hello hello"
-                       "activity activity activity aside "
-                       "averageSession all score aside ";
-  grid-template-rows: 1fr 250px 200px 200px;
-  grid-template-columns: repeat(4,1fr);
+    max-width: 100vw;
+    grid-area: main;
+    background-color: var(--color-white);
+    display: grid;
+    grid-template-areas:
+        'hello hello hello hello'
+        'activity activity activity aside '
+        'averageSession all score aside ';
+    grid-template-rows: 1fr 250px 200px 200px;
+    grid-template-columns: repeat(4, 1fr);
 }

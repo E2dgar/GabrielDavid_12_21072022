@@ -1,8 +1,8 @@
-import logo from "../../../assets/logo/logo.png";
-import './index.css'
+import logo from '../../../assets/logo/logo.png';
+import './index.css';
 
 const Logo = () => {
-  return <img className="logo" src={logo} alt="Logo Sportsee"/>
-}
+    return <img className="logo" src={logo} alt="Logo Sportsee" />;
+};
 
-export default Logo
+export default Logo;
