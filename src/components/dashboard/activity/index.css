@@ -1,6 +1,13 @@
 .activity {
   grid-area: activity;
-  background-color: var(--background-chart)
+  background-color: var(--background-chart);
+  position: relative;
+}
+
+.activity h2 {
+  position: absolute;
+  top: 24px;
+  left: 32px;
 }
 
 .kilogramBar path{
