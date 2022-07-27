@@ -1,10 +1,13 @@
 :root {
   --color-primary: #FF0101;
+  --color-primray-chart: #E60000;
   --color-white: #FFFFFF;
   --color-black-font: #000000;
   --color-black-bg: #020203;
+  --color-black-chart: #282D30;
   --background-main: #E5E5E5;
   --background-toogle: #F7F7F7;
+  --background-chart: #FBFBFB;
 
   --font-8: .5rem;
   --font-12: .75rem;

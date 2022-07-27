@@ -4,6 +4,7 @@ import Footer from "./components/molecules/footer";
 import Header from "./components/molecules/header";
 
 const App = () => {
+ 
   return (
     <>
       <Header/>

@@ -1,0 +1,12 @@
+.activity {
+  grid-area: activity;
+  background-color: var(--background-chart)
+}
+
+.kilogramBar path{
+  fill: var(--color-black-chart)
+}
+
+.caloriesBar path{
+  fill: var(--color-primray-chart)
+}

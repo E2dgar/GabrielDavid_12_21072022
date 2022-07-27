@@ -1,5 +1,6 @@
 .hello {
   padding: 65px 105px;
+  grid-area: hello;
 }
 
 .hello h1,
