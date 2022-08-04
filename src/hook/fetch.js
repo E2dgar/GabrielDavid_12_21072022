@@ -15,14 +15,14 @@ const useFetch = (url) => {
                 const response = await fetch(url);
                 const data = await response.json();
 
+                /*Get label of userId */
+                const getIdLabel = data[0].id ? 'id' : 'userId';
+
                 setData(
                     data.filter(
                         (user) =>
-                            user.id ||
-                            user.userId ===
-                                parseInt(
-                                    window.location.pathname.split('/').pop()
-                                )
+                            user[getIdLabel] ===
+                            parseInt(window.location.pathname.split('/').pop())
                     )[0]
                 );
             } catch (err) {

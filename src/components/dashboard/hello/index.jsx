@@ -1,6 +1,18 @@
 import './index.css';
+import UserModel from '../../../models/User';
+import { GetUser } from '../../../services/http';
 
-const Hello = ({ user }) => {
+const Hello = () => {
+    const { data, isLoading, error } = GetUser();
+
+    if (isLoading) {
+        return <p> User is loading</p>;
+    }
+    if (error) {
+        return <p>User error</p>;
+    }
+    console.log('dash', data);
+    const user = new UserModel(data);
     return (
         <section className="hello">
             <h1>
