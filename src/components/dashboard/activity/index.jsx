@@ -1,5 +1,4 @@
-import { API_PATH } from '../../../constants';
-import { useFetch } from '../../../services/http';
+import { GetActivity } from '../../../services/http';
 import {
     BarChart,
     Bar,
@@ -14,22 +13,16 @@ import './index.css';
 import ActivityModel from '../../../models/Activity';
 
 const Activity = () => {
-    const {
-        data: activity,
-        isLoading: activityIsLoading,
-        error: activityError
-    } = useFetch(API_PATH.ACTIVITY);
+    const { data, isLoading, error } = GetActivity();
 
-    if (activityIsLoading) {
-        return <p>Load</p>;
+    if (isLoading) {
+        return <p>Activity is loading</p>;
     }
-    if (activityError) {
-        return <p>error</p>;
+    if (error) {
+        return <p>error actvivyt</p>;
     }
-    const userActivity = new ActivityModel(
-        activity.filter((user) => user.userId === 12)[0]
-    );
-    console.log('model', userActivity.formattedSessions);
+    const userActivity = new ActivityModel(data);
+
     return (
         <section className="activity">
             <h2>Activité quotidienne</h2>

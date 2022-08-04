@@ -1,31 +1,28 @@
+import { GetUser } from '../../../services/http';
 import Activity from '../../dashboard/activity';
 import Hello from '../../dashboard/hello';
-import { useFetch } from '../../../services/http';
-import { API_PATH } from '../../../constants';
 import './index.css';
+import UserModel from '../../../models/User';
 
 const Dashboard = () => {
-    const {
-        data: user,
-        isLoading: userIsloading,
-        error: errorUser
-    } = useFetch(API_PATH.USER);
+    const { data, isLoading, error } = GetUser();
 
-    const {
-        data: activity,
-        isLoading: activityIsloading,
-        error: activityError
-    } = useFetch(API_PATH.ACTIVITY);
+    if (isLoading) {
+        return <p> User is loading</p>;
+    }
+    if (error) {
+        return <p>User error</p>;
+    }
+    console.log('dash', data);
+    const user = new UserModel(data);
 
     return (
         <main>
-            <Hello user={user} isLoading={userIsloading} error={errorUser} />
+            <Hello user={user} />
 
-            <Activity
-                data={activity}
-                isLoading={activityIsloading}
-                error={activityError}
-            />
+            <Activity userId={user.id} />
+
+            {/*} <AverageSessions user={user} />*/}
         </main>
     );
 };
