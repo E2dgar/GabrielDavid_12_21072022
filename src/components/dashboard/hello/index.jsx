@@ -11,7 +11,7 @@ const Hello = () => {
     if (error) {
         return <p>User error</p>;
     }
-    console.log('dash', data);
+
     const user = new UserModel(data);
     return (
         <section className="hello">
