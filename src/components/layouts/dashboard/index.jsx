@@ -7,7 +7,7 @@ const Dashboard = () => {
         <main>
             <Hello />
 
-            <Activity />
+            {/*<Activity />*/}
 
             {/*} <AverageSessions user={user} />*/}
         </main>

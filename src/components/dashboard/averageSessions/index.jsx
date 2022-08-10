@@ -2,7 +2,7 @@ import { GetAverageSessions } from '../../../services/http';
 import './index.css';
 
 const AverageSessions = () => {
-    const {
+    /* const {
         data: averageSessions,
         isLoading: averageSessionsIsLOading,
         error: averageSessionsError
@@ -16,7 +16,7 @@ const AverageSessions = () => {
     }
     console.log(averageSessions);
 
-    return <section className="hello"></section>;
+    return <section className="hello"></section>;*/
 };
 
 export default AverageSessions;

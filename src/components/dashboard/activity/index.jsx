@@ -13,7 +13,7 @@ import './index.css';
 import ActivityModel from '../../../models/Activity';
 
 const Activity = () => {
-    const { data, isLoading, error } = GetActivity();
+    /*const { data, isLoading, error } = GetActivity();
 
     if (isLoading) {
         return <p>Activity is loading</p>;
@@ -74,7 +74,7 @@ const Activity = () => {
                 </BarChart>
             </ResponsiveContainer>
         </section>
-    );
+    );*/
 };
 
 export default Activity;

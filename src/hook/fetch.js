@@ -12,19 +12,16 @@ const useFetch = (url) => {
 
         async function fetchData() {
             try {
-                const response = await fetch(url);
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
                 const data = await response.json();
 
-                /*Get label of userId */
-                const getIdLabel = data[0].id ? 'id' : 'userId';
-
-                setData(
-                    data.filter(
-                        (user) =>
-                            user[getIdLabel] ===
-                            parseInt(window.location.pathname.split('/').pop())
-                    )[0]
-                );
+                setData(data);
             } catch (err) {
                 console.log('error', err);
                 setError(true);
