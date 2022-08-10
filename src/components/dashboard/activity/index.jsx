@@ -10,18 +10,19 @@ import {
     ResponsiveContainer
 } from 'recharts';
 import './index.css';
-import ActivityModel from '../../../models/Activity';
+import { useFetchByFn } from '../../../hook/fetch';
+import Error from '../../atoms/error';
+import Loader from '../../atoms/loader';
 
 const Activity = () => {
-    /*const { data, isLoading, error } = GetActivity();
+    const { data, isLoading, error } = useFetchByFn(GetActivity);
 
     if (isLoading) {
-        return <p>Activity is loading</p>;
+        return <Loader message={' Your activity '} />;
     }
     if (error) {
-        return <p>error actvivyt</p>;
+        return <Error message={' activity '} className="activity-error" />;
     }
-    const userActivity = new ActivityModel(data);
 
     return (
         <section className="activity">
@@ -30,7 +31,7 @@ const Activity = () => {
                 <BarChart
                     width={500}
                     height={10}
-                    data={userActivity.formattedSessions}
+                    data={data.formattedSessions}
                     margin={{
                         top: 32,
                         right: 30,
@@ -74,7 +75,7 @@ const Activity = () => {
                 </BarChart>
             </ResponsiveContainer>
         </section>
-    );*/
+    );
 };
 
 export default Activity;

@@ -18,6 +18,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
+    "homepage": "http://localhost:3000/user/18",
     "eslintConfig": {
         "extends": [
             "react-app",

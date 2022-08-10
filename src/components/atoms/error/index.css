@@ -1,0 +1,14 @@
+.hello-error {
+    padding: 65px 105px;
+    grid-area: hello;
+}
+
+.activity-error {
+    padding: 65px 105px;
+    grid-area: activity;
+}
+
+.average-sessions-error {
+    padding: 65px 105px;
+    grid-area: averageSession;
+}

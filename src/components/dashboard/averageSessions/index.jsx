@@ -1,22 +1,26 @@
-import { GetAverageSessions } from '../../../services/http';
 import './index.css';
+import { useFetchByFn } from '../../../hook/fetch';
+import { GetAverageSessions } from '../../../services/http';
+import Error from '../../atoms/error';
+import Loader from '../../atoms/loader';
 
 const AverageSessions = () => {
-    /* const {
-        data: averageSessions,
-        isLoading: averageSessionsIsLOading,
-        error: averageSessionsError
-    } = GetAverageSessions();
+    const { data, isLoading, error } = useFetchByFn(GetAverageSessions);
 
-    if (averageSessionsIsLOading) {
-        return <p>Loading</p>;
+    if (isLoading) {
+        return <Loader message={' Your average sessions '} />;
     }
-    if (averageSessionsError) {
-        return <p>error</p>;
+    if (error) {
+        return (
+            <Error
+                message={' average sessions '}
+                className="average-sessions-error"
+            />
+        );
     }
-    console.log(averageSessions);
+    console.log('averageSessions', data);
 
-    return <section className="hello"></section>;*/
+    return <section className="hello">average sessions</section>;
 };
 
 export default AverageSessions;

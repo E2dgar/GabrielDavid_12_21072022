@@ -1,31 +1,30 @@
 import './index.css';
-import UserModel from '../../../models/User';
 import { GetUser } from '../../../services/http';
-import { useFetch } from '../../../hook/fetch';
-import { API_PATH } from '../../../constants';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useFetchByFn } from '../../../hook/fetch';
+import Error from '../../atoms/error';
+import Loader from '../../atoms/loader';
 
+/**
+ * Component to display greatings and hello user
+ * @component
+ */
 const Hello = () => {
-    GetUser().then((result) => console.log(result));
-    /*const { user, isLoading, error } = GetUser();*/
+    const { data, isLoading, error } = useFetchByFn(GetUser);
 
-    /* if (isLoading) {
-        return <p> User is loading</p>;
+    if (isLoading) {
+        return <Loader message={' Your welcome '} />;
     }
     if (error) {
-        return <p>User error</p>;
-    }*/
-    /* console.log('data', user);
-    /* const user = new UserModel(data);*/
+        return <Error message={' welcome '} className="hello-error" />;
+    }
+    console.log('data', data);
 
     return (
         <section className="hello">
-            {/*}
             <h1>
-                Bonjour <span>{userData.user.firstName}</span>{' '}
+                Bonjour <span>{data.firstName}</span>
             </h1>
-    <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>*/}
+            <p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
         </section>
     );
 };

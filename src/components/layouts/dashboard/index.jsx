@@ -1,5 +1,6 @@
 import Activity from '../../dashboard/activity';
 import Hello from '../../dashboard/hello';
+import AverageSessions from '../../dashboard/averageSessions';
 import './index.css';
 
 const Dashboard = () => {
@@ -7,9 +8,9 @@ const Dashboard = () => {
         <main>
             <Hello />
 
-            {/*<Activity />*/}
+            <Activity />
 
-            {/*} <AverageSessions user={user} />*/}
+            <AverageSessions />
         </main>
     );
 };
