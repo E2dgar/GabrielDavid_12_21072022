@@ -3,6 +3,7 @@ import { get } from './http-client';
 import UserModel from '../models/User';
 import ActivityModel from '../models/Activity';
 import AverageSessionsModel from '../models/AverageSessions';
+import PerformanceModel from '../models/Performance';
 
 export default function GetuserId() {
     const idInUrl = window.location.pathname.split('/').pop();
@@ -44,4 +45,16 @@ const GetAverageSessions = async () => {
     return new AverageSessionsModel(averageSessionsByUserId);
 };
 
-export { GetUser, GetActivity, GetAverageSessions };
+/**
+ * GET Performance from a user by user ID
+ * @returns {object} Performance Model
+ */
+const GetPerformance = async () => {
+    const data = await get(API_PATH.PERFORMANCE);
+    const performanceByUserId = data?.find(
+        (user) => user.userId === GetuserId()
+    );
+    return new PerformanceModel(performanceByUserId);
+};
+
+export { GetUser, GetActivity, GetAverageSessions, GetPerformance };

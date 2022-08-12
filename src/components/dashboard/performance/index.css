@@ -1,0 +1,18 @@
+.perf {
+    grid-area: perf;
+    /*max-width: 258px;*/
+}
+
+.perf .recharts-responsive-container {
+    background: var(--color-black-chart);
+}
+
+.perf .recharts-radar-polygon path {
+    fill: var(--color-primary);
+    fill-opacity: 0.7;
+}
+
+.perf .recharts-text tspan {
+    fill: var(--color-white);
+    font-size: var(--font-12);
+}

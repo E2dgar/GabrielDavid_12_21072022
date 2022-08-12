@@ -25,7 +25,6 @@ const useFetchByFn = (fetchFunction) => {
                 setError(true);
             } finally {
                 setIsLoading(false);
-                setError(true);
             }
         }
 
