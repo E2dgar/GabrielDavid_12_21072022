@@ -2,3 +2,7 @@
     grid-area: averageSession;
     /*max-width: 258px;*/
 }
+
+.average-sessions .recharts-area-area {
+    fill: var(--color-primary-average-chart);
+}

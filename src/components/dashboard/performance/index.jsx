@@ -27,11 +27,7 @@ const Performance = () => {
     return (
         <section className="perf">
             <ResponsiveContainer width="100%" height="100%">
-                <RadarChart
-                    outerRadius={90}
-                    width={730}
-                    height={250}
-                    data={data.formattedPerf}>
+                <RadarChart outerRadius={90} data={data.formattedPerf}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="kind" />
                     <Radar dataKey="value" />

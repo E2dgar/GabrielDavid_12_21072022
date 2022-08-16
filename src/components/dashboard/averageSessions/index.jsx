@@ -27,21 +27,19 @@ const AverageSessions = () => {
             />
         );
     }
-    console.log('averageSessions', data);
+    console.log('date sessions', data.formattedSessions);
 
     return (
         <section className="average-sessions">
             <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={data.formattedSessions}>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="dayLetter" />
-                    <YAxis />
+                    <XAxis dataKey="dayLegend" />
                     <Tooltip />
                     <Area
+                        className="area"
                         type="monotone"
                         dataKey="sessionLength"
-                        stroke="#8884d8"
-                        fill="#8884d8"
                     />
                 </AreaChart>
             </ResponsiveContainer>

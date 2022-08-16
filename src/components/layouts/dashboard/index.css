@@ -7,6 +7,12 @@ main {
         'hello hello hello hello'
         'activity activity activity aside '
         'averageSession perf score aside ';
-    grid-template-rows: 1fr 250px 200px 200px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 270px 270px;
+    grid-template-columns: 258px 258px 258x 1fr;
+}
+
+@media screen and (max-height: 800px) {
+    main {
+        grid-template-rows: minmax(90px, 100px) 270px 250px;
+    }
 }

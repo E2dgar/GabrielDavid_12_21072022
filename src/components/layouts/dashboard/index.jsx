@@ -3,6 +3,8 @@ import Hello from '../../dashboard/hello';
 import AverageSessions from '../../dashboard/averageSessions';
 import Performance from '../../dashboard/performance';
 import './index.css';
+import Indicators from '../../dashboard/indicators';
+import Score from '../../dashboard/score';
 
 const Dashboard = () => {
     return (
@@ -14,6 +16,10 @@ const Dashboard = () => {
             <AverageSessions />
 
             <Performance />
+
+            <Score />
+
+            <Indicators />
         </main>
     );
 };

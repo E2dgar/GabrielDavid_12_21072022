@@ -4,6 +4,8 @@ import UserModel from '../models/User';
 import ActivityModel from '../models/Activity';
 import AverageSessionsModel from '../models/AverageSessions';
 import PerformanceModel from '../models/Performance';
+import IndicatorsModel from '../models/Indicators';
+import ScoreModel from '../models/Score';
 
 export default function GetuserId() {
     const idInUrl = window.location.pathname.split('/').pop();
@@ -57,4 +59,31 @@ const GetPerformance = async () => {
     return new PerformanceModel(performanceByUserId);
 };
 
-export { GetUser, GetActivity, GetAverageSessions, GetPerformance };
+/**
+ * GET Indicators from a user by user ID
+ * @returns {object} Indicators Model
+ */
+const GetIndicators = async () => {
+    const data = await get(API_PATH.USER);
+    const indicatorsByUserId = data?.find((user) => user.id === GetuserId());
+    return new IndicatorsModel(indicatorsByUserId);
+};
+
+/**
+ * GET score from a user by user ID
+ * @returns {object} Score Model
+ */
+const GetScore = async () => {
+    const data = await get(API_PATH.USER);
+    const scoreByUserId = data?.find((user) => user.id === GetuserId());
+    return new ScoreModel(scoreByUserId);
+};
+
+export {
+    GetUser,
+    GetActivity,
+    GetAverageSessions,
+    GetPerformance,
+    GetIndicators,
+    GetScore
+};

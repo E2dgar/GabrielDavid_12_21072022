@@ -1,3 +1,9 @@
+/**
+ * GET
+ * @param {string} url
+ * @param {string} type
+ * @returns {object}
+ */
 const get = async (url, type = 'application/json') => {
     const response = await fetch(url, {
         method: 'GET',

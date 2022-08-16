@@ -12,3 +12,13 @@
 .hello h1 span {
     color: var(--color-primary);
 }
+
+@media screen {
+    .hello {
+        padding: 1rem;
+    }
+    .hello h1,
+    .hello h1 span {
+        font-size: var(--font-26);
+    }
+}
