@@ -1,8 +1,19 @@
-const API_PATH = {
+const DATA_MOCKED = false;
+
+const API_PATH_MOCKED = {
     USER: '/data/user.json',
     ACTIVITY: '/data/activity.json',
     AVERAGE_SESSIONS: '/data/averageSessions.json',
     PERFORMANCE: '/data/performance.json'
+};
+
+const API_PATH_BASE = 'http://localhost:3000/user/';
+
+const API_PATHS = {
+    USER: '',
+    ACTIVITY: '/activity',
+    AVERAGE_SESSIONS: '/average-sessions',
+    PERFORMANCE: '/performance'
 };
 
 const LANG = 'FR';
@@ -31,4 +42,11 @@ const TRANSLATION = {
     }
 };
 
-export { API_PATH, TRANSLATION, LANG };
+export {
+    DATA_MOCKED,
+    API_PATH_BASE,
+    API_PATH_MOCKED,
+    API_PATHS,
+    TRANSLATION,
+    LANG
+};

@@ -13,13 +13,13 @@ const Dashboard = () => {
 
             <Activity />
 
-            <AverageSessions />
+            {/*   <AverageSessions />
 
             <Performance />
 
             <Score />
 
-            <Indicators />
+    <Indicators />*/}
         </main>
     );
 };
