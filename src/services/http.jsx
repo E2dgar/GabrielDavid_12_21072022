@@ -7,6 +7,10 @@ import PerformanceModel from '../models/Performance';
 import IndicatorsModel from '../models/Indicators';
 import ScoreModel from '../models/Score';
 
+/**
+ * Get the ID in URL
+ * @returns
+ */
 export default function GetuserId() {
     const idInUrl = window.location.pathname.split('/').pop();
     return parseInt(idInUrl);

@@ -8,7 +8,7 @@ main {
         'activity activity activity aside '
         'averageSession perf score aside ';
     grid-template-rows: 1fr 270px 270px;
-    grid-template-columns: 258px 258px 258x 1fr;
+    grid-template-columns: 258px 258px 258px 1fr;
 }
 
 @media screen and (max-height: 800px) {

@@ -32,9 +32,14 @@ const Score = () => {
                     outerRadius={90}
                     barSize={10}
                     data={data.formattedScore}
-                    startAngle={90}
-                    endAngle={data.formattedScore[0].score + 90}>
-                    <RadialBar label={false} cornerRadius={5} dataKey="score" />
+                    startAngle={200}
+                    endAngle={data.formattedScore[0].score - 70}>
+                    <RadialBar
+                        label={false}
+                        cornerRadius={5}
+                        dataKey="score"
+                        clockWise
+                    />
                     {/* <Legend
                     iconSize={10}
                     width={120}
