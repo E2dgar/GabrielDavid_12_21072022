@@ -1,10 +1,11 @@
 .perf {
     grid-area: perf;
-    /*max-width: 258px;*/
+    max-width: 260px;
 }
 
 .perf .recharts-responsive-container {
     background: var(--color-black-chart);
+    border-radius: 5px;
 }
 
 .perf .recharts-radar-polygon path {
@@ -15,4 +16,8 @@
 .perf .recharts-text tspan {
     fill: var(--color-white);
     font-size: var(--font-12);
+}
+
+.perf .recharts-polar-grid-angle line {
+    stroke: transparent;
 }

@@ -19,17 +19,17 @@ class IndicatorsModel {
                 picto: 'calories.png'
             },
             {
-                label: 'prot',
+                label: 'protéines',
                 count: this.protein + 'g',
                 picto: 'proteines.png'
             },
             {
-                label: 'gluci',
+                label: 'glucides',
                 count: this.glucid + 'g',
                 picto: 'glucides.png'
             },
             {
-                label: 'lipid',
+                label: 'lipides',
                 count: this.lipid + 'g',
                 picto: 'lipides.png'
             }

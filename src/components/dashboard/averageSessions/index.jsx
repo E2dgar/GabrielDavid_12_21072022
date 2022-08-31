@@ -33,8 +33,12 @@ const AverageSessions = () => {
         <section className="average-sessions">
             <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={data.formattedSessions}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="dayLegend" />
+                    {/*<CartesianGrid strokeDasharray="3 3" />*/}
+                    <XAxis
+                        dataKey="dayLegend"
+                        axisLine={false}
+                        tickLine={false}
+                    />
                     <Tooltip />
                     <Area
                         className="area"

@@ -2,6 +2,7 @@
     grid-area: activity;
     background-color: var(--background-chart);
     position: relative;
+    margin-right: 16px;
 }
 
 .activity h2 {

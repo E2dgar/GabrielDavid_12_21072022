@@ -1,8 +1,29 @@
 .average-sessions {
     grid-area: averageSession;
-    /*max-width: 258px;*/
+    margin: 5px;
+    max-width: 260px;
+}
+
+.average-sessions {
+    background-color: var(--color-primary-average-chart);
+    border-radius: 5px;
 }
 
 .average-sessions .recharts-area-area {
-    fill: var(--color-primary-average-chart);
+    fill: none;
+}
+
+.average-sessions .recharts-area-curve {
+    stroke: var(--color-white);
+    stroke-width: 3px;
+    opacity: 0.5;
+}
+
+.average-sessions text {
+    fill: var(--color-white);
+    opacity: 0.5;
+}
+
+.average-sessions .xAxis {
+    padding: 0 10px;
 }

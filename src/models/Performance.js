@@ -15,10 +15,12 @@ class PerformanceModel {
     }
 
     get formattedPerf() {
-        return this.data.map((elt) => ({
-            value: elt.value,
-            kind: this.translate(this.kindIDToString(elt.kind))
-        }));
+        return this.data
+            .map((elt) => ({
+                value: elt.value,
+                kind: this.translate(this.kindIDToString(elt.kind))
+            }))
+            .reverse();
     }
 }
 

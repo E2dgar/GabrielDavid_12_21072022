@@ -1,10 +1,17 @@
+import './index.css';
+
 const KeyData = ({ label, count, picto }) => {
     return (
-        <>
-            <img src={`assets/keyData/${picto}`} alt={label} />
-            <p>{label}</p>
-            <p>{count}</p>
-        </>
+        <div className="key-data">
+            <img
+                src={`${process.env.PUBLIC_URL}/assets/keyData/${picto}`}
+                alt={label}
+            />
+            <div className="details">
+                <p className="value">{count}</p>
+                <p className="label">{label}</p>
+            </div>
+        </div>
     );
 };
 

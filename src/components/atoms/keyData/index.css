@@ -1,0 +1,37 @@
+.key-data {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-chart);
+    border-radius: 5px;
+    padding: 32px;
+}
+
+.key-data img {
+    width: 60px;
+    height: 60px;
+}
+
+.key-data .details {
+    margin-left: 24px;
+}
+.key-data p {
+    margin: 0;
+}
+
+.key-data .value {
+    color: var(--color-black-chart);
+    font-size: var(--font-20);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.key-data .label {
+    text-transform: capitalize;
+    font-size: var(--font-14);
+}
+
+@media screen and (max-height: 880px) {
+    .key-data {
+        padding: 16px;
+    }
+}
