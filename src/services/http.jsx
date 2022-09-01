@@ -74,10 +74,10 @@ const GetActivity = async () => {
  */
 const GetAverageSessions = async () => {
     const data = await get(paths.AVERAGE_SESSIONS);
-    const averageSessionsByUserId = data?.find(
+    /*const averageSessionsByUserId = data?.find(
         (user) => user.userId === GetuserId()
-    );
-    return new AverageSessionsModel(averageSessionsByUserId);
+    );*/
+    return new AverageSessionsModel(getData(data));
 };
 
 /**
@@ -86,10 +86,10 @@ const GetAverageSessions = async () => {
  */
 const GetPerformance = async () => {
     const data = await get(paths.PERFORMANCE);
-    const performanceByUserId = data?.find(
+    /*const performanceByUserId = data?.find(
         (user) => user.userId === GetuserId()
-    );
-    return new PerformanceModel(performanceByUserId);
+    );*/
+    return new PerformanceModel(getData(data));
 };
 
 /**
@@ -98,8 +98,8 @@ const GetPerformance = async () => {
  */
 const GetIndicators = async () => {
     const data = await get(paths.USER);
-    const indicatorsByUserId = data?.find((user) => user.id === GetuserId());
-    return new IndicatorsModel(indicatorsByUserId);
+    /*const indicatorsByUserId = data?.find((user) => user.id === GetuserId());*/
+    return new IndicatorsModel(getData(data));
 };
 
 /**
@@ -108,8 +108,8 @@ const GetIndicators = async () => {
  */
 const GetScore = async () => {
     const data = await get(paths.USER);
-    const scoreByUserId = data?.find((user) => user.id === GetuserId());
-    return new ScoreModel(scoreByUserId);
+    /*const scoreByUserId = data?.find((user) => user.id === GetuserId());*/
+    return new ScoreModel(getData(data));
 };
 
 export {
