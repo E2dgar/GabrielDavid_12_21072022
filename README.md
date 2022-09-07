@@ -25,8 +25,7 @@ Install dependencies
 
 ### Backend
 
-A backend is available <a href="https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard">here</a>
-Follow instructions to install it.
+A backend is available <a href="https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard">here </a>with all instructions to install and launch it.
 
 ### Frontend
 
