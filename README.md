@@ -20,3 +20,18 @@ Clone the repository
 Install dependencies
 
 <pre>npm install</pre>
+
+## Launch the project
+
+### Backend
+
+A backend is available <a href="https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard">here</a>
+Follow instructions to install it.
+
+### Frontend
+
+Once the backend is started you can launch the frontend
+
+<pre>$ npn run dev</pre>
+
+<i>Note: The backend will launch on port 3000 so on frontend start accept another port in terminal</i>
