@@ -33,4 +33,4 @@ Once the backend is started you can launch the frontend
 
 <pre>$ npn run dev</pre>
 
-<i>Note: The backend will launch on port 3000 so on frontend start accept another port in terminal</i>
+<i>Note: The backend will launch on port 3000 so, on frontend start, accept another port in terminal</i>
