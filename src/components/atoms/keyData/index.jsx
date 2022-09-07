@@ -1,5 +1,9 @@
 import './index.css';
+import PropTypes from 'prop-types';
 
+/**
+ * Component for showing a keyData
+ */
 const KeyData = ({ label, count, picto }) => {
     return (
         <div className="key-data">
@@ -13,6 +17,21 @@ const KeyData = ({ label, count, picto }) => {
             </div>
         </div>
     );
+};
+
+KeyData.propTypes = {
+    /**
+     * KeyData 's label
+     */
+    label: PropTypes.string.isRequired,
+    /**
+     * KeyData's count
+     */
+    count: PropTypes.string.isRequired,
+    /**
+     * KeyData's picto
+     */
+    picto: PropTypes.string.isRequired
 };
 
 export default KeyData;

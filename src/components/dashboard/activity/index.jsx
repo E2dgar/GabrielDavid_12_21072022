@@ -14,6 +14,9 @@ import { useFetchByFn } from '../../../hook/fetch';
 import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
 
+/**
+ *  Component for showing ACtivity Chart
+ */
 const Activity = () => {
     const { data, isLoading, error } = useFetchByFn(GetActivity);
 

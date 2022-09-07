@@ -3,14 +3,11 @@ import { GetScore } from '../../../services/http';
 import { useFetchByFn } from '../../../hook/fetch';
 import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
-import {
-    RadialBarChart,
-    RadialBar,
-    Legend,
-    Tooltip,
-    ResponsiveContainer
-} from 'recharts';
+import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
+/**
+ *  Component for showing Score Chart
+ */
 const Score = () => {
     const { data, isLoading, error } = useFetchByFn(GetScore);
 

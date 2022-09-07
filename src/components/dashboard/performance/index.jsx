@@ -11,6 +11,9 @@ import {
     ResponsiveContainer
 } from 'recharts';
 
+/**
+ *  Component for showing Performance Chart
+ */
 const Performance = () => {
     const { data, isLoading, error } = useFetchByFn(GetPerformance);
 

@@ -3,16 +3,11 @@ import { useFetchByFn } from '../../../hook/fetch';
 import { GetAverageSessions } from '../../../services/http';
 import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
-import {
-    AreaChart,
-    Area,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer
-} from 'recharts';
+import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
+/**
+ *  Component for showing AverageSessions Chart
+ */
 const AverageSessions = () => {
     const { data, isLoading, error } = useFetchByFn(GetAverageSessions);
 

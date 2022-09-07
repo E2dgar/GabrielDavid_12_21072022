@@ -5,6 +5,9 @@ import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
 import KeyData from '../../atoms/keyData';
 
+/**
+ *  Component for showing keyDatas
+ */
 const Indicators = () => {
     const { data, isLoading, error } = useFetchByFn(GetIndicators);
 

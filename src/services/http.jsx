@@ -1,6 +1,5 @@
 import {
     DATA_MOCKED,
-    API_PATH,
     API_PATHS,
     API_PATH_BASE,
     API_PATH_MOCKED
