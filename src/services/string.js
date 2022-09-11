@@ -15,4 +15,20 @@ const numberToFirstLetter = (day) => {
     return days[day];
 };
 
-export { capitalize, numberToFirstLetter };
+const dotToComma = (string) => {
+    return string.replace('.', ',');
+};
+
+const addExtraZero = (number) => {
+    const indexOfFloat = number.toString().indexOf('.');
+
+    for (let i = 0; i < 4; i++) {
+        console.log(i);
+        if (!number.toString().charAt(indexOfFloat + i)) {
+            number = number + '0';
+        }
+    }
+    return dotToComma(number);
+};
+
+export { capitalize, numberToFirstLetter, addExtraZero };

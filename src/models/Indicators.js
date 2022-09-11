@@ -1,4 +1,5 @@
 import { TRANSLATION, LANG } from '../constants';
+import { addExtraZero } from '../services/string';
 
 class IndicatorsModel {
     constructor(data) {
@@ -11,11 +12,20 @@ class IndicatorsModel {
     formatLabel(label) {
         return TRANSLATION.keyData[`${label}`][LANG];
     }
+
+    formatCalorie(calorie) {
+        if ((calorie / 1000) % 1 === 0) {
+            return calorie / 1000;
+        }
+
+        return addExtraZero(calorie / 1000);
+    }
+
     get formattedIndicators() {
         return [
             {
                 label: 'calories',
-                count: this.calorie / 100 + 'kCal',
+                count: this.formatCalorie(this.calorie) + 'kCal',
                 picto: 'calories.png'
             },
             {
