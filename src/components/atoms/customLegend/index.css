@@ -1,0 +1,30 @@
+.custom-legend {
+    margin: 0 0 0 auto;
+    width: max-content;
+    display: flex;
+    gap: 2rem;
+}
+
+.custom-legend li {
+    list-style: none;
+    padding-left: 20px;
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: calc(50% - 4px);
+    left: 0;
+}
+
+.calories-li::before {
+    background-color: var(--color-primray-chart);
+}
+
+.kilogram-li::before {
+    background-color: var(--color-black-chart);
+}

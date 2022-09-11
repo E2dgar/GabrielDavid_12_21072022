@@ -7,8 +7,10 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
-    ResponsiveContainer
+    ResponsiveContainer,
+    Text
 } from 'recharts';
+import CustomLegendChart from '../../atoms/customLegend';
 import './index.css';
 import { useFetchByFn } from '../../../hook/fetch';
 import Error from '../../atoms/error';
@@ -27,6 +29,7 @@ const Activity = () => {
         return <Error message={' activity '} className="activity-error" />;
     }
 
+    console.log('dataformatttttted', data.formattedSessions[0]);
     return (
         <section className="activity">
             <h2>Activité quotidienne</h2>
@@ -36,7 +39,7 @@ const Activity = () => {
                     height={10}
                     data={data.formattedSessions}
                     margin={{
-                        top: 32,
+                        top: 16,
                         right: 30,
                         left: 20,
                         bottom: 5
@@ -55,11 +58,30 @@ const Activity = () => {
                     />
                     <YAxis yAxisId="calories" dataKey="calories" hide={true} />
                     <Tooltip />
-                    <Legend
+                    {/*<Legend
                         verticalAlign="top"
                         align="right"
                         iconType="circle"
                         height={72}
+                    />*/}
+                    <Legend
+                        verticalAlign="top"
+                        content={
+                            <CustomLegendChart>
+                                {Object.keys(data.formattedSessions[0]).map(
+                                    (item) =>
+                                        item === 'day' ? null : (
+                                            <li
+                                                key={item}
+                                                className={`${item}-li circle`}>
+                                                {item === 'kilogram'
+                                                    ? 'Poids (en kg)'
+                                                    : 'Calories brûlées (kCal)'}
+                                            </li>
+                                        )
+                                )}
+                            </CustomLegendChart>
+                        }
                     />
                     <Bar
                         yAxisId="kilogram"

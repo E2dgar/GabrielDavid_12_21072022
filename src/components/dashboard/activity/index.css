@@ -7,8 +7,9 @@
 
 .activity h2 {
     position: absolute;
-    top: 24px;
+    top: 16px;
     left: 32px;
+    margin: 0;
 }
 
 .kilogramBar path {
