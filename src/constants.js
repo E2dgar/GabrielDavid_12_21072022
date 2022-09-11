@@ -1,4 +1,4 @@
-const DATA_MOCKED = false;
+const DATA_MOCKED = true;
 
 const API_PATH_MOCKED = {
     USER: '/data/user.json',

@@ -30,8 +30,8 @@
     font-size: var(--font-14);
 }
 
-@media screen and (max-height: 880px) {
+@media screen and (max-height: 900px) {
     .key-data {
-        padding: 16px;
+        padding: 0 16px;
     }
 }

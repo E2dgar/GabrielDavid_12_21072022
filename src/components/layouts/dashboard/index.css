@@ -1,7 +1,7 @@
 main {
     max-width: 100%;
     max-height: calc(100vh - 91px);
-    padding: 65px 107px 40px 107px;
+    padding: 60px 107px 40px 107px;
     grid-area: main;
     background-color: var(--color-white);
     display: grid;
@@ -9,14 +9,21 @@ main {
         'hello hello hello hello'
         'activity activity activity aside '
         'averageSession perf score aside ';
-    grid-template-rows: minmax(1fr, 170px) 263px 263px;
-    grid-template-columns:
-        minmax(258px, 258px) minmax(258px, 258px) minmax(258px, 258px)
-        258px;
+    grid-template-rows: minmax(100px, 200px) 320px 263px;
+    grid-template-columns: repeat(4, 258px);
+    gap: 30px;
 }
 
-@media screen and (max-height: 880px) {
+@media screen and (max-height: 900px) {
     main {
+        padding: 3vh;
+        grid-template-rows: 1fr 280px 230px;
+    }
+}
+@media screen and (max-width: 1380px) {
+    main {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        gap: 16px;
         padding: 3vh;
     }
 }
