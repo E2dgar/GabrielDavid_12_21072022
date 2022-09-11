@@ -32,18 +32,27 @@ const Activity = () => {
     console.log('dataformatttttted', data.formattedSessions[0]);
     return (
         <section className="activity">
-            <h2>Activité quotidienne</h2>
+            {/*<h2>Activité quotidienne</h2>*/}
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     width={500}
                     height={10}
                     data={data.formattedSessions}
+                    barCategoryGap={7}
+                    barGap={8}
                     margin={{
-                        top: 16,
+                        top: 10,
                         right: 30,
                         left: 20,
                         bottom: 5
                     }}>
+                    <text
+                        x={0}
+                        y={0}
+                        dominantBaseline="hanging"
+                        className="daily-activity-chart__title">
+                        <tspan fontSize="15">Activité quotidienne</tspan>
+                    </text>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="day" />
                     <YAxis

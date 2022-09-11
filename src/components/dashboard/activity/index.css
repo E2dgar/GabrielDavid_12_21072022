@@ -5,11 +5,8 @@
     margin-right: 16px;
 }
 
-.activity h2 {
-    position: absolute;
-    top: 16px;
-    left: 32px;
-    margin: 0;
+.activity .recharts-responsive-container {
+    padding-top: 10px;
 }
 
 .kilogramBar path {
