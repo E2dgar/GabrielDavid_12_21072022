@@ -3,7 +3,15 @@ import { useFetchByFn } from '../../../hook/fetch';
 import { GetAverageSessions } from '../../../services/http';
 import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
-import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import {
+    LineChart,
+    Line,
+    XAxis,
+    Tooltip,
+    ResponsiveContainer,
+    YAxis
+} from 'recharts';
+import CustomCursor from './customCursor';
 
 /**
  *  Component for showing AverageSessions Chart
@@ -22,7 +30,10 @@ const AverageSessions = () => {
             />
         );
     }
-    console.log('date sessions', data.formattedSessions);
+
+    const toolTipFormatter = (value) => {
+        return [value + ' min'];
+    };
 
     return (
         <section className="average-sessions">
@@ -30,22 +41,29 @@ const AverageSessions = () => {
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                     data={data.formattedSessions}
-                    margin={{ top: 77, left: 0, bottom: 16, right: 0 }}>
+                    margin={{ top: 0, left: 0, bottom: 16, right: 0 }}>
                     <XAxis
                         dataKey="dayLegend"
                         axisLine={false}
                         tickLine={false}
                         padding={{ left: 10, right: 10 }}
                     />
+                    <YAxis padding={{ top: 70 }} hide />
 
                     <Tooltip
-                        contentStyle={{ background: 'white' }}
-                        labelStyle={{ display: 'none' }}
-                        itemStyle={{
-                            color: 'black',
-                            fontWeight: 'bold'
+                        wrapperStyle={{
+                            background: 'var(--color-white)',
+                            color: '#000',
+                            outline: 'none',
+                            border: 'none'
                         }}
-                        cursor={false}
+                        labelStyle={{
+                            display: 'none',
+                            border: 'none',
+                            outline: 'none'
+                        }}
+                        cursor={<CustomCursor />}
+                        formatter={toolTipFormatter}
                     />
                     <Line
                         dataKey="sessionLength"
@@ -57,6 +75,7 @@ const AverageSessions = () => {
                             strokeWidth: 10,
                             r: 5
                         }}
+                        dot={false}
                     />
                 </LineChart>
             </ResponsiveContainer>
