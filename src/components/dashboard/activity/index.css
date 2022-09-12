@@ -6,7 +6,7 @@
 }
 
 .activity .recharts-responsive-container {
-    padding-top: 10px;
+    padding: 32px;
 }
 
 .kilogramBar path {
@@ -15,4 +15,9 @@
 
 .caloriesBar path {
     fill: var(--color-primray-chart);
+}
+
+.recharts-text tspan {
+    font-size: 14px;
+    font-weight: 500;
 }
