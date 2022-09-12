@@ -1,19 +1,23 @@
 .average-sessions {
+    position: relative;
     grid-area: averageSession;
-    margin: 5px;
     max-width: 260px;
-}
-
-.average-sessions {
     background-color: var(--color-primary-average-chart);
     border-radius: 5px;
 }
 
-.average-sessions .recharts-area-area {
-    fill: none;
+.average-sessions h2 {
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    max-width: 150px;
+    margin: 0;
+    color: var(--color-white);
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: var(--font-15);
 }
-
-.average-sessions .recharts-area-curve {
+.average-sessions .recharts-line path {
     stroke: var(--color-white);
     stroke-width: 3px;
     opacity: 0.5;
@@ -22,8 +26,4 @@
 .average-sessions text {
     fill: var(--color-white);
     opacity: 0.5;
-}
-
-.average-sessions .xAxis {
-    padding: 0 10px;
 }

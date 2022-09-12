@@ -3,7 +3,7 @@ import { useFetchByFn } from '../../../hook/fetch';
 import { GetAverageSessions } from '../../../services/http';
 import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
-import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 /**
  *  Component for showing AverageSessions Chart
@@ -26,21 +26,39 @@ const AverageSessions = () => {
 
     return (
         <section className="average-sessions">
+            <h2> Durée moyenne des sessions</h2>
             <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data.formattedSessions}>
-                    {/*<CartesianGrid strokeDasharray="3 3" />*/}
+                <LineChart
+                    data={data.formattedSessions}
+                    margin={{ top: 77, left: 0, bottom: 16, right: 0 }}>
                     <XAxis
                         dataKey="dayLegend"
                         axisLine={false}
                         tickLine={false}
+                        padding={{ left: 10, right: 10 }}
                     />
-                    <Tooltip />
-                    <Area
-                        className="area"
-                        type="monotone"
+
+                    <Tooltip
+                        contentStyle={{ background: 'white' }}
+                        labelStyle={{ display: 'none' }}
+                        itemStyle={{
+                            color: 'black',
+                            fontWeight: 'bold'
+                        }}
+                        cursor={false}
+                    />
+                    <Line
                         dataKey="sessionLength"
+                        legendType="none"
+                        type="natural"
+                        activeDot={{
+                            stroke: 'rgba(255, 255, 255, .3)',
+                            fill: 'rgb(255, 255, 255)',
+                            strokeWidth: 10,
+                            r: 5
+                        }}
                     />
-                </AreaChart>
+                </LineChart>
             </ResponsiveContainer>
         </section>
     );

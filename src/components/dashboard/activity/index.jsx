@@ -51,10 +51,8 @@ const Activity = () => {
                         x={0}
                         y={0}
                         dominantBaseline="hanging"
-                        className="daily-activity-chart__title">
-                        <tspan fontSize="15" fontWeight={500} fill="#20253A">
-                            Activité quotidienne
-                        </tspan>
+                        className="activity-chart-text">
+                        <tspan>Activité quotidienne</tspan>
                     </text>
                     <Legend
                         verticalAlign="top"
