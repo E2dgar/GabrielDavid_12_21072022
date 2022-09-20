@@ -3,7 +3,6 @@ import './index.css';
 
 /**
  * Component for a menu item in secondary Nav
- * @component
  */
 const ItemSecondaryNav = ({ href, picto }) => {
     return (
@@ -14,7 +13,13 @@ const ItemSecondaryNav = ({ href, picto }) => {
 };
 
 ItemSecondaryNav.propsType = {
+    /**
+     * ItemSecondaryNav's picto
+     */
     picto: PropTypes.element.isRequired,
+    /**
+     * ItemSecondaryNav's href
+     */
     href: PropTypes.string.isRequired
 };
 

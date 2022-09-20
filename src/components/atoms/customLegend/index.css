@@ -22,7 +22,7 @@
 }
 
 .calories-li::before {
-    background-color: var(--color-primray-chart);
+    background-color: var(--color-primary-chart);
 }
 
 .kilogram-li::before {

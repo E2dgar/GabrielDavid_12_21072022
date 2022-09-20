@@ -33,7 +33,7 @@ const Performance = () => {
                 <RadarChart outerRadius={90} data={data.formattedPerf}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="kind" />
-                    <Radar dataKey="value" />
+                    <Radar dataKey="value"  />
                 </RadarChart>
             </ResponsiveContainer>
         </section>

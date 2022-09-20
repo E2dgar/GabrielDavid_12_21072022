@@ -7,8 +7,7 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
-    ResponsiveContainer,
-    Text
+    ResponsiveContainer
 } from 'recharts';
 import CustomLegendChart from '../../atoms/customLegend';
 import './index.css';
@@ -17,7 +16,7 @@ import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
 
 /**
- *  Component for showing ACtivity Chart
+ *  Component for showing Activity Chart
  */
 const Activity = () => {
     const { data, isLoading, error } = useFetchByFn(GetActivity);
@@ -29,14 +28,13 @@ const Activity = () => {
         return <Error message={' activity '} className="activity-error" />;
     }
 
-    console.log('dataformatttttted', data.formattedSessions[0]);
+    const toolTipFormatter = (value, name) => {
+        return name === 'kilogram' ? [value + 'kg'] : [value + 'kCal'];
+    };
+
     return (
         <section className="activity">
-            {/*<h2>Activité quotidienne</h2>*/}
-            <ResponsiveContainer
-                width="100%"
-                height="100%"
-                padding={{ top: 100, right: 0, bottom: 0, left: 0 }}>
+            <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     data={data.formattedSessions}
                     barCategoryGap={7}
@@ -96,7 +94,16 @@ const Activity = () => {
                         tickLine={false}
                     />
                     <YAxis yAxisId="calories" dataKey="calories" hide={true} />
-                    <Tooltip />
+                    <Tooltip
+                        contentStyle={{
+                            background: 'var(--color-primary-chart)',
+                            color: 'white'
+                        }}
+                        labelStyle={{
+                            display: 'none'
+                        }}
+                        formatter={toolTipFormatter}
+                    />
 
                     <Bar
                         yAxisId="kilogram"

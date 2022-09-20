@@ -3,7 +3,6 @@ import './index.css';
 
 /**
  * Component for a menu item in main Nav
- * @component
  */
 const ItemMainNav = ({ textContent, href }) => {
     return (
@@ -14,7 +13,13 @@ const ItemMainNav = ({ textContent, href }) => {
 };
 
 ItemMainNav.propsType = {
+    /**
+     * ItemMainNav's textContent
+     */
     textContent: PropTypes.string.isRequired,
+    /**
+     * ItemMainNav's href
+     */
     href: PropTypes.string.isRequired
 };
 

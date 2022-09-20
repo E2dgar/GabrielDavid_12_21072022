@@ -14,7 +14,11 @@
 }
 
 .caloriesBar path {
-    fill: var(--color-primray-chart);
+    fill: var(--color-primary-chart);
+}
+
+.activity .recharts-tooltip-item-value {
+    color: var(--color-white);
 }
 
 .recharts-text tspan {

@@ -17,7 +17,7 @@ main {
 @media screen and (max-height: 900px) {
     main {
         padding: 3vh;
-        grid-template-rows: 1fr 280px 230px;
+        grid-template-rows: 1fr 247px 263px;
     }
 }
 @media screen and (max-width: 1380px) {

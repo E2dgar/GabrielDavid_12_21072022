@@ -11,7 +11,7 @@ import {
     ResponsiveContainer,
     YAxis
 } from 'recharts';
-import CustomCursor from './customCursor';
+import CustomCursor from './averageCustomCursor';
 
 /**
  *  Component for showing AverageSessions Chart
