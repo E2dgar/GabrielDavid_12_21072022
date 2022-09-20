@@ -1,3 +1,24 @@
+.score {
+    background: var(--background-chart);
+}
+
 .score path {
     fill: var(--color-primary);
+}
+
+.score .score-heading {
+    font-weight: bold;
+    font-size: var(--font-15);
+}
+
+.score .percent {
+    fill: var(--color-black-chart);
+    font-size: var(--font-26);
+    font-weight: 700;
+}
+
+.score tspan.label-score {
+    fill: var(--color-grey-chart);
+    font-size: var(--font-16);
+    font-weight: 700;
 }

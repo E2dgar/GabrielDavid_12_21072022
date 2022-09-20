@@ -23,6 +23,7 @@ const Score = () => {
         <section className="score">
             <ResponsiveContainer>
                 <RadialBarChart
+                    background="red"
                     width={270}
                     height={250}
                     innerRadius={90}
@@ -37,15 +38,24 @@ const Score = () => {
                         dataKey="score"
                         clockWise
                     />
-                    {/* <Legend
-                    iconSize={10}
-                    width={120}
-                    height={140}
-                    layout="vertical"
-                    verticalAlign="middle"
-                    align="right"
-                />*/}
-                    {/*<Tooltip />*/}
+                    <text
+                        className="score-heading"
+                        x={0}
+                        y="2.5%"
+                        dominantBaseline="hanging">
+                        Score
+                    </text>
+                    <text textAnchor="middle">
+                        <tspan className="percent" x="50%" y="50%">
+                            {`${data.labelScore}%`}
+                        </tspan>
+                        <tspan className="label-score" x="50%" y="62.5%">
+                            de votre
+                        </tspan>
+                        <tspan className="label-score" x="50%" y="74%">
+                            objectif
+                        </tspan>
+                    </text>
                 </RadialBarChart>
             </ResponsiveContainer>
         </section>
