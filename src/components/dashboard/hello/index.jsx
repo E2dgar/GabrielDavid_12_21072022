@@ -6,7 +6,6 @@ import Loader from '../../atoms/loader';
 
 /**
  * Component to display greatings and hello user
- * @component
  */
 const Hello = () => {
     const { data, isLoading, error } = useFetchByFn(GetUser);
@@ -17,7 +16,6 @@ const Hello = () => {
     if (error) {
         return <Error message={' welcome '} className="hello-error" />;
     }
-    console.log('data', data);
 
     return (
         <section className="hello">

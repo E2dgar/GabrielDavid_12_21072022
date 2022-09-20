@@ -56,20 +56,9 @@ const Activity = () => {
                         verticalAlign="top"
                         wrapperStyle={{ padding: '0 0 60px 0' }}
                         content={
-                            <CustomLegendChart>
-                                {Object.keys(data.formattedSessions[0]).map(
-                                    (item) =>
-                                        item === 'day' ? null : (
-                                            <li
-                                                key={item}
-                                                className={`${item}-li circle`}>
-                                                {item === 'kilogram'
-                                                    ? 'Poids (en kg)'
-                                                    : 'Calories brûlées (kCal)'}
-                                            </li>
-                                        )
-                                )}
-                            </CustomLegendChart>
+                            <CustomLegendChart
+                                data={Object.keys(data.formattedSessions[0])}
+                            />
                         }
                     />
 
@@ -100,7 +89,8 @@ const Activity = () => {
                             color: 'white'
                         }}
                         labelStyle={{
-                            display: 'none'
+                            display: 'none',
+                            border: 'none'
                         }}
                         formatter={toolTipFormatter}
                     />

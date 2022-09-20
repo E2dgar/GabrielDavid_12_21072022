@@ -17,7 +17,6 @@ const Score = () => {
     if (error) {
         return <Error message={' score '} className="score-error" />;
     }
-    console.log('score', data.formattedScore);
 
     return (
         <section className="score">

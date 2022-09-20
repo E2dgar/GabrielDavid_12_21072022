@@ -1,7 +1,7 @@
-import SecondaryNav from './components/menus/navSecondary';
+import SecondaryNav from './components/molecules/navs/navSecondary';
 import Dashboard from './components/layouts/dashboard';
-import Footer from './components/molecules/footer';
-import Header from './components/molecules/header';
+import Footer from './components/organisms/footer';
+import Header from './components/organisms/header';
 
 const App = () => {
     return (

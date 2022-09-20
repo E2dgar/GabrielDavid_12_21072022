@@ -1,5 +1,4 @@
 import { Rectangle } from 'recharts';
-import PropTypes from 'prop-types';
 
 /**
  * Component for showing a customCursor Rect

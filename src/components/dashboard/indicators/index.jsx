@@ -17,8 +17,6 @@ const Indicators = () => {
     if (error) {
         return <Error message={' indicators '} className="indicators-error" />;
     }
-    console.log('model indics', data);
-    console.log('indicators', data.formattedIndicators);
 
     return (
         <section className="indicators">

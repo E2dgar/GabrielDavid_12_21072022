@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 
-/* Responsabilité : cycle de vie, et mettre dans le state */
-
 /**
  *
  * @param {func} fetchFunction Function that passed the URL, make map operations and return a Class of data
- * @returns Class Model
+ * @returns {Object}
  */
 const useFetchByFn = (fetchFunction) => {
     const [data, setData] = useState([]);

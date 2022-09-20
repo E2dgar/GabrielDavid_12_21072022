@@ -25,7 +25,6 @@ const Performance = () => {
             <Error message={' performance '} className="performance-error" />
         );
     }
-    console.log('performance', data.formattedPerf);
 
     return (
         <section className="perf">
@@ -33,7 +32,7 @@ const Performance = () => {
                 <RadarChart outerRadius={90} data={data.formattedPerf}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="kind" />
-                    <Radar dataKey="value"  />
+                    <Radar dataKey="value" />
                 </RadarChart>
             </ResponsiveContainer>
         </section>

@@ -1,5 +1,5 @@
 import Logo from '../../atoms/logo';
-import MainNav from '../../menus/navMain';
+import MainNav from '../../molecules/navs/navMain';
 
 import './index.css';
 

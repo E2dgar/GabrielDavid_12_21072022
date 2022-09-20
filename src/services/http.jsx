@@ -12,6 +12,9 @@ import PerformanceModel from '../models/Performance';
 import IndicatorsModel from '../models/Indicators';
 import ScoreModel from '../models/Score';
 
+/**
+ * Return an object with path to data depending on choice of data (mocked or API)
+ */
 const paths = DATA_MOCKED
     ? {
           USER: API_PATH_MOCKED.USER,
@@ -36,14 +39,12 @@ const getData = (data) => {
 
 /**
  * Get the ID in URL
- * @returns
+ * @returns {number}
  */
 export default function GetuserId() {
     const idInUrl = window.location.pathname.split('/').pop();
     return parseInt(idInUrl);
 }
-
-/** Responsability : appel + mapping */
 
 /**
  * GET a user informations by user ID and return User Model
@@ -51,8 +52,6 @@ export default function GetuserId() {
  */
 const GetUser = async () => {
     const data = await get(paths.USER);
-    /*const user = data?.find((user) => user.id === GetuserId());*/
-    console.log('back', data);
     return new UserModel(getData(data));
 };
 
@@ -62,8 +61,6 @@ const GetUser = async () => {
  */
 const GetActivity = async () => {
     const data = await get(paths.ACTIVITY);
-    /* const activityByUserId = data?.find((user) => user.userId === GetuserId());
-    console.log('activyty user', activityByUserId);*/
     return new ActivityModel(getData(data));
 };
 
@@ -73,9 +70,6 @@ const GetActivity = async () => {
  */
 const GetAverageSessions = async () => {
     const data = await get(paths.AVERAGE_SESSIONS);
-    /*const averageSessionsByUserId = data?.find(
-        (user) => user.userId === GetuserId()
-    );*/
     return new AverageSessionsModel(getData(data));
 };
 
@@ -85,9 +79,6 @@ const GetAverageSessions = async () => {
  */
 const GetPerformance = async () => {
     const data = await get(paths.PERFORMANCE);
-    /*const performanceByUserId = data?.find(
-        (user) => user.userId === GetuserId()
-    );*/
     return new PerformanceModel(getData(data));
 };
 
@@ -97,7 +88,6 @@ const GetPerformance = async () => {
  */
 const GetIndicators = async () => {
     const data = await get(paths.USER);
-    /*const indicatorsByUserId = data?.find((user) => user.id === GetuserId());*/
     return new IndicatorsModel(getData(data));
 };
 
@@ -107,7 +97,6 @@ const GetIndicators = async () => {
  */
 const GetScore = async () => {
     const data = await get(paths.USER);
-    /*const scoreByUserId = data?.find((user) => user.id === GetuserId());*/
     return new ScoreModel(getData(data));
 };
 

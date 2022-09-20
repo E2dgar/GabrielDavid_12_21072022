@@ -23,7 +23,6 @@ const addExtraZero = (number) => {
     const indexOfFloat = number.toString().indexOf('.');
 
     for (let i = 0; i < 4; i++) {
-        console.log(i);
         if (!number.toString().charAt(indexOfFloat + i)) {
             number = number + '0';
         }

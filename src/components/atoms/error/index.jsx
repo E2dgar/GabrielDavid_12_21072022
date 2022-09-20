@@ -3,14 +3,6 @@ import PropTypes from 'prop-types';
 
 /**
  * Commponent for showing error message
- *
- * @component
- * @example
- * const message = "activity chart"
- * const className = "activity-error"
- * return (
- *  <Error className={className} message={message} />
- * )
  */
 const Error = ({ message, className }) => {
     return (
