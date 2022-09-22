@@ -5,6 +5,11 @@
     gap: 39px;
 }
 
+@media screen and (max-width: 1300px) {
+    .indicators .key-data .value {
+        font-size: var(--font-14);
+    }
+}
 @media screen and (max-height: 880px) {
     .indicators {
         gap: 16px;

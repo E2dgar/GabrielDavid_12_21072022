@@ -23,7 +23,7 @@ const Score = () => {
             <ResponsiveContainer>
                 <RadialBarChart
                     background="red"
-                    width={270}
+                    width={170}
                     height={250}
                     innerRadius={90}
                     outerRadius={90}

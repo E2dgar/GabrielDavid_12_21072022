@@ -17,8 +17,8 @@ import CustomCursor from './averageCustomCursor';
  *  Component for showing AverageSessions Chart
  */
 const AverageSessions = () => {
-    const { data, isLoading, error } = useFetchByFn(GetAverageSessions);
-
+    let { data, isLoading, error } = useFetchByFn(GetAverageSessions);
+    isLoading = true;
     if (isLoading) {
         return <Loader message={' Your average sessions '} />;
     }

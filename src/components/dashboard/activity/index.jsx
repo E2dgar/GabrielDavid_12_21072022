@@ -19,8 +19,8 @@ import Loader from '../../atoms/loader';
  *  Component for showing Activity Chart
  */
 const Activity = () => {
-    const { data, isLoading, error } = useFetchByFn(GetActivity);
-
+    let { data, isLoading, error } = useFetchByFn(GetActivity);
+    error = true;
     if (isLoading) {
         return <Loader message={' Your activity '} />;
     }
