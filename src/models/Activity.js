@@ -1,20 +1,37 @@
+/**
+ * Class representing Activity data
+ *
+ * @property {Array} sessions - The activity sessions
+ */
 class ActivityModel {
-  constructor(data){
-    this.sessions = data.sessions
-  }
+    /**
+     * @constructor
+     * @param {Array} data  - Data of sessions
+     */
+    constructor(data) {
+        this.sessions = data.sessions;
+    }
 
-  formattedDate (date) {
-    return new Date(date).getDate();
-  }
+    /**
+     * Convert a string to a date
+     * @param {string} date
+     * @returns {date} new Date
+     */
+    formattedDate(date) {
+        return new Date(date).getDate();
+    }
 
-  get formattedSessions () {
-    return this.sessions.map(session => (
-      { day: this.formattedDate(session.day), 
-        kilogram: session.kilogram,
-        calories: session.calories
-      })
-    )
-  }
+    /**
+     * Get the formatted sessions
+     * @return {Array} {day, kilogram, calories}
+     */
+    get formattedSessions() {
+        return this.sessions.map((session) => ({
+            day: this.formattedDate(session.day),
+            kilogram: session.kilogram,
+            calories: session.calories
+        }));
+    }
 }
 
-export default ActivityModel
+export default ActivityModel;
