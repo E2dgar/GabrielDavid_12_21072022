@@ -31,3 +31,11 @@ main {
         column-gap: calc(16px + 4vw);
     }
 }
+
+/* Add max width to dashboard to prevent very wide screen. */
+@media screen and (min-width: 2000px) {
+    main {
+        grid-template-columns: repeat(3, 350px) 300px;
+        justify-content: center;
+    }
+}
