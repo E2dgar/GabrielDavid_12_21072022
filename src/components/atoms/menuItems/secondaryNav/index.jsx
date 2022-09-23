@@ -2,7 +2,13 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 /**
- * Component for a menu item in secondary Nav
+ * Component for showing a item for the secondary nav
+ * @component
+ *
+ * @param {string} href The href for the link
+ * @param {element} picto Img tag
+ *
+ * @returns {JSX.Element} secondary nav item.
  */
 const ItemSecondaryNav = ({ href, picto }) => {
     return (

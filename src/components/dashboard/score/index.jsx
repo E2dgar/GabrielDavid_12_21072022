@@ -6,7 +6,9 @@ import Loader from '../../atoms/loader';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
 /**
- *  Component for showing Score Chart
+ *  Component for showing Score Chart.
+ *  RadialBarChart.
+ * @return {JSX.Element}
  */
 const Score = () => {
     const { data, isLoading, error } = useFetchByFn(GetScore);

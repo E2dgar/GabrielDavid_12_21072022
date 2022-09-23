@@ -2,7 +2,15 @@ import './index.css';
 import PropTypes from 'prop-types';
 
 /**
- * Component for showing a keyData
+ * Component for showing a keyData.
+ * Displays the label and the value of a keyData and his picto
+ * @component
+ *
+ * @param {label} string  Label of keyData
+ * @param {count} string  Value of keyData
+ * @param {picto} string  Name of img for src construction
+ *
+ * @returns {JSX.Element} KeyData component.
  */
 const KeyData = ({ label, count, picto }) => {
     return (

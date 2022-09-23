@@ -6,7 +6,9 @@ import Loader from '../../atoms/loader';
 import KeyData from '../../atoms/keyData';
 
 /**
- *  Component for showing keyDatas
+ * Component for showing key indicators .
+ *
+ * @return {JSX.Element}
  */
 const Indicators = () => {
     const { data, isLoading, error } = useFetchByFn(GetIndicators);

@@ -2,7 +2,13 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 /**
- * Component for a menu item in main Nav
+ * Component for showing a item for the main nav
+ * @component
+ *
+ * @param {string} textContent Label of item
+ * @param {string} href The href for the link
+ *
+ * @returns {JSX.Element} Main nav item.
  */
 const ItemMainNav = ({ textContent, href }) => {
     return (

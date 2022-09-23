@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 /**
  * Component for showing a custom legend list
+ * @component
+ *
+ * @param {Array} data A array of item to create li elements
+ *
+ * @returns {JSX.Element} CustomLegend for chart.
  */
 const CustomLegendChart = ({ data }) => {
     return (

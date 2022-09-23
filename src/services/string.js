@@ -1,24 +1,26 @@
+/**
+ * Return a string with first letter uppercase
+ * @param {string} string
+ * @returns {string}
+ */
 const capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-const numberToFirstLetter = (day) => {
-    const days = {
-        1: 'L',
-        2: 'M',
-        3: 'M',
-        4: 'J',
-        5: 'V',
-        6: 'S',
-        7: 'D'
-    };
-    return days[day];
-};
-
+/**
+ * Replace '.' by ',' in a string
+ * @param {string} string
+ * @returns {string}
+ */
 const dotToComma = (string) => {
     return string.replace('.', ',');
 };
 
+/**
+ * Add extra zero for having 3 numbers after comma and apply dotToComma
+ * @param {number} number
+ * @returns {string}
+ */
 const addExtraZero = (number) => {
     const indexOfFloat = number.toString().indexOf('.');
 
@@ -30,4 +32,4 @@ const addExtraZero = (number) => {
     return dotToComma(number);
 };
 
-export { capitalize, numberToFirstLetter, addExtraZero };
+export { capitalize, addExtraZero };

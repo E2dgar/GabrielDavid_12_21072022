@@ -16,7 +16,9 @@ import Error from '../../atoms/error';
 import Loader from '../../atoms/loader';
 
 /**
- *  Component for showing Activity Chart
+ *  Component for showing Activity Chart.
+ *  BarChart.
+ * @return {JSX.Element}
  */
 const Activity = () => {
     const { data, isLoading, error } = useFetchByFn(GetActivity);

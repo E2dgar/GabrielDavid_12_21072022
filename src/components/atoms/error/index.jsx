@@ -2,7 +2,13 @@ import './index.css';
 import PropTypes from 'prop-types';
 
 /**
- * Commponent for showing error message
+ * Component for showing a error message
+ * @component
+ *
+ * @param {string} message The error message to display
+ * @param {string} className The className for the p element
+ *
+ * @returns {JSX.Element} Error component.
  */
 const Error = ({ message, className }) => {
     return (

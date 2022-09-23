@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>components/dashboard/hello/index.jsx - Documentation</title>
+    <title>services/string.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">components/dashboard/hello/index.jsx</h1>
+    <h1 class="page-title">services/string.js</h1>
     
 
     
@@ -39,39 +39,41 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import './index.css';
-import { GetUser } from '../../../services/http';
-import { useFetchByFn } from '../../../hook/fetch';
-import Error from '../../atoms/error';
-import Loader from '../../atoms/loader';
-
-/**
- * Component to display greatings and hello user
- * @component
- *
- * @returns {JSX.Element} Hello section component.
+            <pre class="prettyprint source linenums"><code>/**
+ * Return a string with first letter uppercase
+ * @param {string} string
+ * @returns {string}
  */
-const Hello = () => {
-    const { data, isLoading, error } = useFetchByFn(GetUser);
-
-    if (isLoading) {
-        return &lt;Loader message={' Your welcome '} />;
-    }
-    if (error) {
-        return &lt;Error message={' welcome '} className="hello-error" />;
-    }
-
-    return (
-        &lt;section className="hello">
-            &lt;h1>
-                Bonjour &lt;span>{data.firstName}&lt;/span>
-            &lt;/h1>
-            &lt;p>Félicitations ! Vous avez explosé vos objectifs hier 👏&lt;/p>
-        &lt;/section>
-    );
+const capitalize = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-export default Hello;
+/**
+ * Replace '.' by ',' in a string
+ * @param {string} string
+ * @returns {string}
+ */
+const dotToComma = (string) => {
+    return string.replace('.', ',');
+};
+
+/**
+ * Add extra zero for having 3 numbers after comma and apply dotToComma
+ * @param {number} number
+ * @returns {string}
+ */
+const addExtraZero = (number) => {
+    const indexOfFloat = number.toString().indexOf('.');
+
+    for (let i = 0; i &lt; 4; i++) {
+        if (!number.toString().charAt(indexOfFloat + i)) {
+            number = number + '0';
+        }
+    }
+    return dotToComma(number);
+};
+
+export { capitalize, addExtraZero };
 </code></pre>
         </article>
     </section>

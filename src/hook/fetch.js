@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 /**
- *
+ * Custom hook to manage fetch with loading and error
  * @param {func} fetchFunction Function that passed the URL, make map operations and return a Class of data
  * @returns {Object}
  */

@@ -30,6 +30,11 @@ const paths = DATA_MOCKED
           PERFORMANCE: API_PATH_BASE + GetuserId() + API_PATHS.PERFORMANCE
       };
 
+/**
+ * Return data depending on data's source
+ * @param {Array} data
+ * @returns {Array} data
+ */
 const getData = (data) => {
     if (DATA_MOCKED) {
         return data?.find((user) => user.id ?? user.userId === GetuserId());

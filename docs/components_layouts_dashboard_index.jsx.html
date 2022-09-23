@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>components/dashboard/hello/index.jsx - Documentation</title>
+    <title>components/layouts/dashboard/index.jsx - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">components/dashboard/hello/index.jsx</h1>
+    <h1 class="page-title">components/layouts/dashboard/index.jsx</h1>
     
 
     
@@ -39,39 +39,37 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import './index.css';
-import { GetUser } from '../../../services/http';
-import { useFetchByFn } from '../../../hook/fetch';
-import Error from '../../atoms/error';
-import Loader from '../../atoms/loader';
+            <pre class="prettyprint source linenums"><code>import Activity from '../../dashboard/activity';
+import Hello from '../../dashboard/hello';
+import AverageSessions from '../../dashboard/averageSessions';
+import Performance from '../../dashboard/performance';
+import './index.css';
+import Indicators from '../../dashboard/indicators';
+import Score from '../../dashboard/score';
 
 /**
- * Component to display greatings and hello user
- * @component
- *
- * @returns {JSX.Element} Hello section component.
+ * Component for showing the analytics dashboard
+ * @returns {JSX.Element} Dashboard
  */
-const Hello = () => {
-    const { data, isLoading, error } = useFetchByFn(GetUser);
-
-    if (isLoading) {
-        return &lt;Loader message={' Your welcome '} />;
-    }
-    if (error) {
-        return &lt;Error message={' welcome '} className="hello-error" />;
-    }
-
+const Dashboard = () => {
     return (
-        &lt;section className="hello">
-            &lt;h1>
-                Bonjour &lt;span>{data.firstName}&lt;/span>
-            &lt;/h1>
-            &lt;p>Félicitations ! Vous avez explosé vos objectifs hier 👏&lt;/p>
-        &lt;/section>
+        &lt;main>
+            &lt;Hello />
+
+            &lt;Activity />
+
+            &lt;AverageSessions />
+
+            &lt;Performance />
+
+            &lt;Score />
+
+            &lt;Indicators />
+        &lt;/main>
     );
 };
 
-export default Hello;
+export default Dashboard;
 </code></pre>
         </article>
     </section>

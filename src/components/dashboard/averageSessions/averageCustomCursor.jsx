@@ -1,7 +1,12 @@
 import { Rectangle } from 'recharts';
 
 /**
- * Component for showing a customCursor Rect
+ * Component for showing a custom cursor for chart
+ * @component
+ *
+ * @param {Object} prop The props of the cursor
+ *
+ * @returns {JSX.Element} Custom cursor for chart.
  */
 const AverageCustomCursor = (prop) => {
     const x = prop.points[0].x;

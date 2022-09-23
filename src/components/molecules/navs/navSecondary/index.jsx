@@ -6,7 +6,9 @@ import strength from '../../../../assets/pictos/secondary-nav/strength.png';
 import ItemSecondaryNav from './../../../atoms/menuItems/secondaryNav';
 
 /**
- * Component for the secondary Nav
+ * Component for the secondary nav
+ *
+ * @returns {JSX.Element} Secondary nav
  */
 const SecondaryNav = () => {
     return (

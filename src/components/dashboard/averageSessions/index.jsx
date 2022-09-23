@@ -14,7 +14,9 @@ import {
 import CustomCursor from './averageCustomCursor';
 
 /**
- *  Component for showing AverageSessions Chart
+ *  Component for showing Average session Chart.
+ *  LineChart.
+ * @return {JSX.Element}
  */
 const AverageSessions = () => {
     const { data, isLoading, error } = useFetchByFn(GetAverageSessions);

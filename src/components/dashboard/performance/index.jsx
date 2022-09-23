@@ -12,7 +12,9 @@ import {
 } from 'recharts';
 
 /**
- *  Component for showing Performance Chart
+ *  Component for showing Performance Chart.
+ *  RadarChart.
+ * @return {JSX.Element}
  */
 const Performance = () => {
     const { data, isLoading, error } = useFetchByFn(GetPerformance);

@@ -6,6 +6,9 @@ import Loader from '../../atoms/loader';
 
 /**
  * Component to display greatings and hello user
+ * @component
+ *
+ * @returns {JSX.Element} Hello section component.
  */
 const Hello = () => {
     const { data, isLoading, error } = useFetchByFn(GetUser);

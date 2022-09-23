@@ -1,5 +1,10 @@
 import './index.css';
 
+/**
+ * Component for the footer
+ *
+ * @returns {JSX.Element} Footer
+ */
 const Footer = () => {
     return (
         <footer>
