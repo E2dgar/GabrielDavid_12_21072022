@@ -39,8 +39,8 @@ const Score = () => {
                     />
                     <text
                         className="score-heading"
-                        x={0}
-                        y="2.5%"
+                        x={24}
+                        y={30}
                         dominantBaseline="hanging">
                         Score
                     </text>

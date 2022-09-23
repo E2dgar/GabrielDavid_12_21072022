@@ -3,7 +3,8 @@ footer {
     background-color: var(--color-black-bg);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 32px;
 }
 
 footer p {

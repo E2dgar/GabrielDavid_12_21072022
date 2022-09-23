@@ -1,7 +1,6 @@
 .average-sessions {
     position: relative;
     grid-area: averageSession;
-    max-width: 260px;
     background-color: var(--color-primary-average-chart);
     border-radius: 5px;
 }

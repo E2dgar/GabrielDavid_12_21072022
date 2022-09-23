@@ -29,10 +29,6 @@
     src: url('../public/font/Roboto-Regular.ttf') format('truetype');
 }
 
-#root {
-    height: 100vh;
-}
-
 * {
     font-family: 'Roboto', sans-serif;
     font-size: var(--font-16);
@@ -45,11 +41,12 @@ body {
 }
 
 #root {
+    min-height: 100vh;
     display: grid;
     grid-template-areas:
         'header header'
         'nav main'
         'footer main';
-    grid-template-rows: 91px 1fr 258px;
+    grid-template-rows: 91px 1fr 1fr;
     grid-template-columns: 117px 1fr;
 }

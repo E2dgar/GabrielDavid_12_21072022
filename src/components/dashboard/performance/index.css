@@ -1,6 +1,5 @@
 .perf {
     grid-area: perf;
-    max-width: 260px;
 }
 
 .perf .recharts-responsive-container {
