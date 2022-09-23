@@ -3,6 +3,8 @@ import './index.css';
 
 /**
  * Component for the main nav
+ *
+ * @returns {JSX.Element} Main nav
  */
 const MainNav = () => {
     return (
